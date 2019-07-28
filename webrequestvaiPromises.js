@@ -3,7 +3,7 @@ return new Promise(function(resolved, reject){
     var request = new XMLHttpRequest();
     request.open('GET', url);
     request.onload = function(){
-        if(request.status == 200){
+        if(request.status == 400){
             resolved(request.response);
         }else{
             reject(Error(request.statusText));
